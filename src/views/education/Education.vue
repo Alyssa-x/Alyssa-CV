@@ -1,41 +1,19 @@
 <template>
   <div class="container-edu">
     <div class="mycontent">
-      <h1 class="title">教育经历</h1>
-      <div class="item">
+      <h1 class="title">{{ title }}</h1>
+      <div class="item" v-for="item in univ" :key="item.id">
         <div class="left">
           <span class="left-icon"></span>
         </div>
         <div class="right">
           <h2 class="school">
-            哈尔滨佛学院
+            {{ item.name }}
           </h2>
-          <p class="teach-time">2017.09 - 2018.12</p>
+          <p class="teach-time">{{ item.start }} - {{ item.end }}</p>
 
-          <div class="major">
-            专业：通信工程
-          </div>
-          <div class="score">
-            绩点：4.9/5.0
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="left">
-          <span class="left-icon"></span>
-        </div>
-        <div class="right">
-          <h2 class="school">
-            哈尔滨佛学院
-          </h2>
-          <p class="teach-time">2017.09 - 2018.12</p>
-
-          <div class="major">
-            专业：通信工程
-          </div>
-          <div class="score">
-            绩点：4.9/5.0
-          </div>
+          <div class="major">专业： {{ item.major }}</div>
+          <div class="score">绩点： {{ item.score }}</div>
         </div>
       </div>
     </div>
@@ -47,10 +25,25 @@ export default {
   name: "Education",
   data() {
     return {
-      name: "沈小湾",
-      phone: "15510320000",
-      email: "mm@cuc.edu.cn",
-      github: "https://github.com/Alyssa-x/Alyssa-CV"
+      title: "教育经历",
+      univ: [
+        {
+          id: 1,
+          name: "哈尔滨佛学院",
+          start: "2019.7",
+          end: "2021.7",
+          major: "吃斋念佛",
+          score: "4.88/5.0"
+        },
+        {
+          id: 2,
+          name: "哈尔滨武学院",
+          start: "2015.7",
+          end: "2019.7",
+          major: "打打杀杀",
+          score: "4.88/5.0"
+        }
+      ]
     };
   }
 };
@@ -79,7 +72,7 @@ export default {
   font-weight: bold;
   height: 55px;
   line-height: 55px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   padding: 8px;
   text-shadow: 2px 2px 3px #222222;
 }
@@ -149,5 +142,4 @@ export default {
   text-align: left;
   margin: 0 15px 10px;
 }
-
 </style>

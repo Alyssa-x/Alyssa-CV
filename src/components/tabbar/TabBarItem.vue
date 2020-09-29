@@ -19,14 +19,7 @@ export default {
 </script>
 
 <style>
-/* #tab-bar {
-  display: flex;
-  background-color: red;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-} */
+
 .tab-bar-item {
   flex: 1;
   text-align: center;

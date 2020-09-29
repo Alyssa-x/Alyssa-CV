@@ -1,79 +1,23 @@
 <template>
   <div class="container-intern">
-      <div class="mycontent">
-        <h1 class="title">实习经历</h1>
-        <div class="item">
-          <div class="left">
-            <span class="left-icon"></span>
-          </div>
-          <div class="right">
-              <h2 class="school">
-                  {{compony.name}}
-                </h2>
-              <p class="teach-time">{{compony.startTime}} - {{compony.endTime}}</p>
-
-                <div class="major">
-                    职位：{{compony.position}}
-                </div>
-                <!-- <div class="score">
-                  绩点：4.9/5.0
-              </div> -->
-              <ul class="score">
-                职责：
-                <li>负责公司产品的前端页面制作</li>
-                <li>优化代码兼容性</li>
-                <li>前端交互和网页美化</li>
-              </ul>
-          </div>
+    <div class="mycontent">
+      <h1 class="title">{{ title }}</h1>
+      <div class="item" v-for="item in compony" :key="item.id">
+        <div class="left">
+          <span class="left-icon"></span>
+        </div>
+        <div class="right">
+          <h2 class="school">
+            {{ item.name }}
+          </h2>
+          <p class="teach-time">{{ item.startTime }} - {{ item.endTime }}</p>
+          <div class="position">职位：{{ item.position }}</div>
+          <ul class="responsibility">
+            <div>职责：</div>
+            <li v-for="(i, index) in item.contents" :key="index">{{ i }}</li>
+          </ul>
+        </div>
       </div>
-      <div class="item">
-        <div class="left">
-          <span class="left-icon"></span>
-        </div>
-        <div class="right">
-            <h2 class="school">
-                {{compony.name}}
-              </h2>
-            <p class="teach-time">{{compony.startTime}} - {{compony.endTime}}</p>
-
-              <div class="major">
-                  职位：{{compony.position}}
-              </div>
-              <!-- <div class="score">
-                绩点：4.9/5.0
-            </div> -->
-            <ul class="score">
-              职责：
-              <li>负责公司产品的前端页面制作</li>
-              <li>优化代码兼容性</li>
-              <li>前端交互和网页美化</li>
-            </ul>
-        </div>
-    </div>
-        <div class="item">
-        <div class="left">
-          <span class="left-icon"></span>
-        </div>
-        <div class="right">
-            <h2 class="school">
-                {{compony.name}}
-              </h2>
-            <p class="teach-time">{{compony.startTime}} - {{compony.endTime}}</p>
-
-              <div class="major">
-                  职位：{{compony.position}}
-              </div>
-              <!-- <div class="score">
-                绩点：4.9/5.0
-            </div> -->
-            <ul class="score">
-              职责：
-              <li>负责公司产品的前端页面制作</li>
-              <li>优化代码兼容性</li>
-              <li>前端交互和网页美化</li>
-            </ul>
-        </div>
-    </div>
     </div>
   </div>
 </template>
@@ -83,13 +27,45 @@ export default {
   name: "Intern",
   data() {
     return {
-      compony:{
-        name:"Google",
-        startTime:"2015.6.7",
-        endTime:"2020.4.7",
-        position:"全栈工程师"
-      },
-    
+      title: "实习经历",
+      compony: [
+        {
+          id: 1,
+          name: "Google",
+          startTime: "2015.6.7",
+          endTime: "2020.4.7",
+          position: "全栈工程师",
+          contents: [
+            "优化代码兼容性",
+            "负责页面的布局和数据渲染",
+            "前端交互和网页美化"
+          ]
+        },
+        {
+          id: 1,
+          name: "Tesla",
+          startTime: "2015.6.7",
+          endTime: "2020.4.7",
+          position: "前端工程师",
+          contents: [
+            "优化代码兼容性",
+            "负责页面的布局和数据渲染",
+            "前端交互和网页美化"
+          ]
+        },
+        {
+          id: 2,
+          name: "Apple",
+          startTime: "2015.6.7",
+          endTime: "2020.4.7",
+          position: "前端工程师",
+          contents: [
+            "优化代码兼容性",
+            "负责页面的布局和数据渲染",
+            "前端交互和网页美化"
+          ]
+        }
+      ]
     };
   }
 };
@@ -119,7 +95,7 @@ export default {
   font-weight: bold;
   height: 55px;
   line-height: 55px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   padding: 8px;
   text-shadow: 2px 2px 3px #222222;
 }
@@ -153,7 +129,7 @@ export default {
 .container-intern .left::after {
   content: "";
   width: 2px;
-  height: 200px;
+  height: 250px;
   background: #333333;
   position: absolute;
   top: -5px;
@@ -181,12 +157,20 @@ export default {
   text-align: left;
   padding: 15px;
 }
-.container-intern .right .major,
-.container-intern .right .score {
+.container-intern .right .position,
+.container-intern .right .responsibility {
   font-family: "微软雅黑", "宋体", "黑体", Arial;
   font-size: 20px;
   font-weight: bold;
   text-align: left;
   margin: 0 15px 10px;
+}
+.container-intern .right .responsibility div {
+  margin-bottom: 5px;
+}
+.container-intern .right .responsibility li {
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 25px;
 }
 </style>

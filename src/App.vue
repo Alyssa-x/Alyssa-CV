@@ -4,16 +4,16 @@
    <tab-bar>
      <tab-bar-item path="/personal">
        <!-- <img src="./assets/logo.png" alt=""> -->
-       <div slot="item-text">个人</div>
+       <div slot="item-text">个人信息</div>
        </tab-bar-item>
       <tab-bar-item path="/education">
        <div slot="item-text">教育经历</div>
       </tab-bar-item>
      <tab-bar-item path="/projects">
-       <div slot="item-text">项目</div>
+       <div slot="item-text">项目经验</div>
       </tab-bar-item>
      <tab-bar-item path="/intern">
-       <div slot="item-text">实习</div>
+       <div slot="item-text">实习经历</div>
      </tab-bar-item>
    </tab-bar>
 
