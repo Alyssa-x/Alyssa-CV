@@ -1,23 +1,39 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="app">    
+  <router-view></router-view>
+   <tab-bar>
+     <tab-bar-item path="/personal">
+       <!-- <img src="./assets/logo.png" alt=""> -->
+       <div slot="item-text">个人</div>
+       </tab-bar-item>
+      <tab-bar-item path="/education">
+       <div slot="item-text">教育经历</div>
+      </tab-bar-item>
+     <tab-bar-item path="/projects">
+       <div slot="item-text">项目</div>
+      </tab-bar-item>
+     <tab-bar-item path="/intern">
+       <div slot="item-text">实习</div>
+     </tab-bar-item>
+   </tab-bar>
+
   </div>
 </template>
 
 <script>
+import TabBar from './components/tabbar/TabBar'
+import TabBarItem from './components/tabbar/TabBarItem'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    TabBar,
+    TabBarItem
+  }
+
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/css/reset.css";
+
 </style>
