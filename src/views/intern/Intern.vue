@@ -37,12 +37,13 @@ export default {
           position: "全栈工程师",
           contents: [
             "优化代码兼容性",
-            "负责页面的布局和数据渲染",
+            "负责页面的布局和数据渲染", 
             "前端交互和网页美化"
           ]
         },
+        
         {
-          id: 1,
+          id: 2,
           name: "Tesla",
           startTime: "2015.6.7",
           endTime: "2020.4.7",
@@ -54,7 +55,7 @@ export default {
           ]
         },
         {
-          id: 2,
+          id: 3,
           name: "Apple",
           startTime: "2015.6.7",
           endTime: "2020.4.7",
@@ -129,10 +130,10 @@ export default {
 .container-intern .left::after {
   content: "";
   width: 2px;
-  height: 250px;
+  height: 25em;
   background: #333333;
   position: absolute;
-  top: -5px;
+  top: -3px;
   left: 39px;
 }
 .container-intern .left-icon {
