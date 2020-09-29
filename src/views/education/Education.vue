@@ -11,7 +11,6 @@
             {{ item.name }}
           </h2>
           <p class="teach-time">{{ item.start }} - {{ item.end }}</p>
-
           <div class="major">专业： {{ item.major }}</div>
           <div class="score">绩点： {{ item.score }}</div>
         </div>
@@ -106,7 +105,7 @@ export default {
 .container-edu .left::after {
   content: "";
   width: 2px;
-  height: 200px;
+  height: 25em;
   background: #333333;
   position: absolute;
   top: -5px;
