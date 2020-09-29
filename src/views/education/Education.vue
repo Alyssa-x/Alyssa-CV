@@ -36,10 +36,10 @@ export default {
         },
         {
           id: 2,
-          name: "哈尔滨武学院",
+          name: "哈佛大学",
           start: "2015.7",
           end: "2019.7",
-          major: "打打杀杀",
+          major: "Computer Science",
           score: "4.88/5.0"
         }
       ]
