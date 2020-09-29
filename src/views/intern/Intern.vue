@@ -86,7 +86,7 @@ export default {
 }
 
 .container-intern h1 {
-  background: #2b6695;
+  background:#6a8372;
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
   color: #ffffff;
@@ -101,7 +101,7 @@ export default {
 }
 
 .container-intern h2 {
-  background: #849ff5;
+  background: rgb(133, 145, 125);
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
   color: #ffffff;
@@ -140,7 +140,7 @@ export default {
   height: 0;
   border-width: 25px;
   border-style: solid;
-  border-color: tomato transparent transparent transparent;
+  border-color:rgb(117, 153, 136) transparent transparent transparent;
 }
 
 .container-intern .right {
@@ -161,7 +161,7 @@ export default {
 .container-intern .right .responsibility {
   font-family: "微软雅黑", "宋体", "黑体", Arial;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   text-align: left;
   margin: 0 15px 10px;
 }

@@ -3,7 +3,6 @@
   <router-view></router-view>
    <tab-bar>
      <tab-bar-item path="/personal">
-       <!-- <img src="./assets/logo.png" alt=""> -->
        <div slot="item-text">个人信息</div>
        </tab-bar-item>
       <tab-bar-item path="/education">

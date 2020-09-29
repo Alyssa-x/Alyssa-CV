@@ -2,17 +2,15 @@
   <div class="container-projects">
     <h1 class="title">{{ title }}</h1>
     <div class="wrap">
-<div class="item" v-for="item in projects" :key="item.id">
-      <h3>{{item.title}}</h3>
-      <ul>
-        <li v-for="(i,index) in item.contents" :key="index">{{i}}</li>
-      </ul>
+      <div class="item" v-for="item in projects" :key="item.id">
+        <h3>{{ item.title }}</h3>
+        <ul>
+          <li v-for="(i, index) in item.contents" :key="index">{{ i }}</li>
+        </ul>
+      </div>
     </div>
-    </div>
-    
+
     <!-- <div :class="{'item':true,'active':isActive[0]}" @click = "itemClick($event)"> -->
-    
-    
   </div>
 </template>
 
@@ -22,48 +20,67 @@ export default {
   data() {
     return {
       // isActive: [false, false, false, false],
-      title:"项目经验",
-      projects:[
+      title: "项目经验",
+      projects: [
         {
-          id:1,
-          title:"搭建第一个个人网站",
-          contents:["做了很多事情","又又做了很多事情","又又又做了很多事情","又又又又做了很多事情"]
+          id: 1,
+          title: "联恺照明后台管理系统",
+          contents: [
+            "优化代码兼容性",
+            "负责页面的布局和数据渲染",
+            "前端交互和网页美化",
+            "负责页面的数据渲染"
+          ]
         },
         {
-          id:2,
-          title:"搭建第二个个人网站",
-          contents:["做了很多事情","又又做了很多事情","又又又做了很多事情","又又又又做了很多事情"]
+          id: 2,
+          title: "新家优品购（微信小程序）",
+          contents: [
+            "做了很多事情",
+            "又又做了很多事情",
+            "又又又做了很多事情",
+            "又又又又做了很多事情"
+          ]
         },
         {
-          id:2,
-          title:"搭建第三个个人网站",
-          contents:["做了很多事情","又又做了很多事情","又又又做了很多事情","又又又又做了很多事情"]
+          id: 3,
+          title: "智爱教育培训信息发布网站",
+          contents: [
+            "做了很多事情",
+            "又又做了很多事情",
+            "又又又做了很多事情",
+            "又又又又做了很多事情"
+          ]
         },
         {
-          id:2,
-          title:"搭建第四个个人网站",
-          contents:["做了很多事情","又又做了很多事情","又又又做了很多事情","又又又又做了很多事情"]
+          id: 4,
+          title: "最后一个随便凑凑吧",
+          contents: [
+            "做了很多事情",
+            "又又做了很多事情",
+            "又又又做了很多事情",
+            "又又又又做了很多事情"
+          ]
         }
       ]
     };
   },
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 @import "../../assets/css/reset.css";
-.container-projects{
+.container-projects {
   width: 500px;
   height: auto;
   margin: 100px auto;
   text-align: center;
+  margin-bottom: 80px;
 }
 .container-projects h1 {
-  background: #2b6695;
+  background: #6a8372;
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
   color: #ffffff;
@@ -77,7 +94,6 @@ export default {
   text-shadow: 2px 2px 3px #222222;
 }
 .wrap {
-
   background-color: antiquewhite;
 }
 .wrap .item {
@@ -88,13 +104,15 @@ export default {
   height: 150px;
 }
 .wrap h3 {
-  font-size: 30px;
+  font-size: 27px;
   width: 100%;
   height: 50px;
   line-height: 50px;
   border-bottom: 2px solid #ccc;
-  background-color: aquamarine;
-  color: blueviolet;
+  background-color: #6a8372;
+  box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+  color: #ffffff;
+  font-family: "微软雅黑", "宋体", "黑体", Arial;
   text-align: center;
   font-weight: bolder;
 }
@@ -104,13 +122,16 @@ export default {
   transition-property: height;
   transition-duration: 1s;
   padding-left: 20px;
-
 }
 .wrap ul li {
   height: auto;
   font-size: 20px;
+  font-family: "微软雅黑", "宋体", "黑体", Arial;
   text-align: left;
   margin: 10px;
-  font-weight: bolder;
+  font-weight: 200;
+}
+.wrap ul li:first-of-type {
+  margin-top: 20px;
 }
 </style>
