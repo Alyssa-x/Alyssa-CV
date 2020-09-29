@@ -1,6 +1,6 @@
 <template>
   <!-- <div class="resume"> -->
-    <div class="container">
+    <div class="container-personal">
       <div class="personal">
         <div class="name">姓名：{{ name }}</div>
         <div class="contact">电话：{{ phone }}</div>
@@ -34,53 +34,36 @@ export default {
 <style>
 @import "../../assets/css/reset.css";
 
-/* html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
 
-} */
- /* .resume {
-  padding: 0;
-  height: auto;
-  width: 76%;
-  min-width: 800px;
-  max-width: 937px;
-  overflow-y: auto;
-}  */
-.container {
+.container-personal {
   width: 800px;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  transform: translateX(-50%);
   background-color: rgb(158, 167, 168);
   /* overflow: hidden; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border-radius: 20px;
 }
-.container .personal {
-  
-}
-.img {
+
+.container-personal .img {
   margin:20px;
   margin-right: -40px;
 
 }
-img {
+.container-personal img {
   width: 150px;
   height: 200px;
 
   /* margin: auto; */
 }
-.personal{
+.container-personal .personal{
   font-size: 20px;
   font-weight:600;
   line-height: 2;
 }
-.personal .name{
-  
-}
+
 </style>
