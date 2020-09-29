@@ -1,3 +1,8 @@
+# 概述
+
+* 将简历分成四个模块展示，封装TabBar组件来使用vue-router切换不同页面。
+* 模板中数据均用变量表示，所以可替换修改。
+
 # alyssa-cv
 
 > A Vue.js project
@@ -18,4 +23,3 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
