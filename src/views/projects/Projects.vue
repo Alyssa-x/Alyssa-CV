@@ -2,15 +2,13 @@
   <div class="container-projects">
     <h1 class="title">{{ title }}</h1>
     <div class="wrap">
-      <div class="item" v-for="item in projects" :key="item.id">
+      <div :class="{'item':true,'active':item.isActive}" v-for="(item,index) in projects" :key="item.id" @click="itemClick(index)">
         <h3>{{ item.title }}</h3>
         <ul>
           <li v-for="(i, index) in item.contents" :key="index">{{ i }}</li>
         </ul>
       </div>
     </div>
-
-    <!-- <div :class="{'item':true,'active':isActive[0]}" @click = "itemClick($event)"> -->
   </div>
 </template>
 
@@ -19,7 +17,6 @@ export default {
   name: "Projects",
   data() {
     return {
-      // isActive: [false, false, false, false],
       title: "项目经验",
       projects: [
         {
@@ -30,7 +27,8 @@ export default {
             "负责页面的布局和数据渲染",
             "前端交互和网页美化",
             "负责页面的数据渲染"
-          ]
+          ],
+          isActive: false
         },
         {
           id: 2,
@@ -40,7 +38,8 @@ export default {
             "又又做了很多事情",
             "又又又做了很多事情",
             "又又又又做了很多事情"
-          ]
+          ],
+          isActive: false
         },
         {
           id: 3,
@@ -50,7 +49,8 @@ export default {
             "又又做了很多事情",
             "又又又做了很多事情",
             "又又又又做了很多事情"
-          ]
+          ],
+          isActive: false
         },
         {
           id: 4,
@@ -60,12 +60,17 @@ export default {
             "又又做了很多事情",
             "又又又做了很多事情",
             "又又又又做了很多事情"
-          ]
+          ],
+          isActive: false
         }
       ]
     };
   },
-  methods: {}
+  methods: {
+    itemClick(index){
+      this.projects[index].isActive = ! this.projects[index].isActive;
+    }
+  }
 };
 </script>
 
@@ -99,7 +104,7 @@ export default {
 .wrap .item {
   width: 100%;
 }
-.wrap .item:hover ul {
+.wrap .item.active ul {
   width: 100%;
   height: 150px;
 }
