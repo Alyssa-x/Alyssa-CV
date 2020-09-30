@@ -120,6 +120,7 @@ export default {
   font-family: "微软雅黑", "宋体", "黑体", Arial;
   text-align: center;
   font-weight: bolder;
+  cursor: pointer;
 }
 .wrap ul {
   height: 0;
